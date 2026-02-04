@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>ArabEez | Institut d’enseignement de la langue arabe et du Coran</title>
+<title>ArabEez Institute | Language & Quran Education</title>
 
-<meta name="description" content="ArabEez est un institut spécialisé dans l’enseignement de la langue arabe, anglaise, du Coran et des sciences islamiques. Cours en ligne pour tous les niveaux.">
-<meta name="keywords" content="ArabEez, institut arabe, cours arabe en ligne, apprendre le coran, sciences islamiques">
+<meta name="description" content="ArabEez Institute offers online courses in Arabic, English, Quran and Islamic studies. Professional education for all levels.">
+<meta name="keywords" content="ArabEez, Arabic courses online, English courses, Quran learning, Islamic studies institute">
 
-<meta property="og:title" content="ArabEez Institut">
-<meta property="og:description" content="Institut d’enseignement de la langue arabe, anglaise et du Coran">
+<meta property="og:title" content="ArabEez Institute">
+<meta property="og:description" content="Online institute for Arabic, English, Quran and Islamic studies">
 <meta property="og:image" content="https://institutarabeez.github.io/logo.png">
 <meta property="og:type" content="website">
 
@@ -40,18 +40,17 @@ body{
 }
 .lang button{
   margin:2px;
-  padding:6px 10px;
+  padding:6px 12px;
   border:none;
   border-radius:6px;
   cursor:pointer;
+  background:#e5e7eb;
 }
 
 /* hero */
 .hero{
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-  url("https://images.unsplash.com/photo-1584697964190-16a4b6b06f96?auto=format&fit=crop&w=1200&q=80");
-  background-size:cover;
-  background-position:center;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6));
+  background-color:#6b7280;
   color:white;
   padding:90px 20px;
 }
@@ -94,7 +93,8 @@ body{
   margin-bottom:40px;
 }
 
-.cards{
+/* programs (custom design) */
+.programs{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
@@ -102,19 +102,36 @@ body{
   margin:auto;
 }
 
-.card{
-  background:white;
-  padding:15px;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
+.program{
+  height:190px;
+  border-radius:22px;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-size:18px;
+  font-weight:700;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
-.card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-  border-radius:10px;
-  margin-bottom:10px;
+.program .icon{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+/* program colors */
+.program.arabic{
+  background:linear-gradient(135deg,#0a8f7a,#16a085);
+}
+.program.english{
+  background:linear-gradient(135deg,#2563eb,#1e40af);
+}
+.program.quran{
+  background:linear-gradient(135deg,#065f46,#064e3b);
+}
+.program.islamic{
+  background:linear-gradient(135deg,#92400e,#78350f);
 }
 
 /* form */
@@ -132,7 +149,7 @@ input,textarea{
   font-family:'Cairo',sans-serif;
 }
 
-button{
+button.submit{
   width:100%;
   padding:14px;
   background:var(--main);
@@ -162,7 +179,6 @@ footer a{
 
 <!-- language -->
 <div class="lang">
-  <button onclick="setLang('ar')">AR</button>
   <button onclick="setLang('fr')">FR</button>
   <button onclick="setLang('en')">EN</button>
 </div>
@@ -173,13 +189,11 @@ footer a{
     <img src="logo.png" alt="ArabEez Logo">
   </div>
 
-  <h1 data-ar="ArabEez"
-      data-fr="Institut ArabEez"
+  <h1 data-fr="Institut ArabEez"
       data-en="ArabEez Institute"></h1>
 
-  <p data-ar="معهد تعليم اللغة العربية، الإنجليزية، القرآن الكريم والعلوم الشرعية. دورات أونلاين لجميع المستويات."
-     data-fr="Institut spécialisé dans l’enseignement de la langue arabe, anglaise, du Coran et des sciences islamiques. Cours en ligne pour tous les niveaux."
-     data-en="Institute for teaching Arabic, English, Quran and Islamic studies. Online courses for all levels."></p>
+  <p data-fr="Institut spécialisé dans l’enseignement des langues, du Coran et des sciences islamiques. Cours en ligne pour tous les niveaux."
+     data-en="Institute specialized in teaching languages, Quran and Islamic studies. Online courses for all levels."></p>
 
   <a class="btn" href="https://wa.me/213557082314">WhatsApp</a>
   <a class="btn" href="mailto:arabeez213@gmail.com">Email</a>
@@ -187,28 +201,28 @@ footer a{
 
 <!-- programs -->
 <section class="section">
-  <h2 data-ar="تخصصاتنا" data-fr="Nos formations" data-en="Our programs"></h2>
+  <h2 data-fr="Nos formations" data-en="Our programs"></h2>
 
-  <div class="cards">
+  <div class="programs">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80">
-      <p data-ar="اللغة العربية" data-fr="Langue arabe" data-en="Arabic Language"></p>
+    <div class="program arabic">
+      <div class="icon">📘</div>
+      <div data-fr="Langue arabe" data-en="Arabic Language"></div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80">
-      <p data-ar="اللغة الإنجليزية" data-fr="Langue anglaise" data-en="English Language"></p>
+    <div class="program english">
+      <div class="icon">🌍</div>
+      <div data-fr="Langue anglaise" data-en="English Language"></div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=800&q=80">
-      <p data-ar="القرآن الكريم" data-fr="Coran" data-en="Quran"></p>
+    <div class="program quran">
+      <div class="icon">📖</div>
+      <div data-fr="Coran" data-en="Quran"></div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=800&q=80">
-      <p data-ar="العلوم الشرعية" data-fr="Sciences islamiques" data-en="Islamic Studies"></p>
+    <div class="program islamic">
+      <div class="icon">🕌</div>
+      <div data-fr="Sciences islamiques" data-en="Islamic Studies"></div>
     </div>
 
   </div>
@@ -216,19 +230,19 @@ footer a{
 
 <!-- contact -->
 <section class="section">
-  <h2 data-ar="تواصل معنا" data-fr="Contactez-nous" data-en="Contact us"></h2>
+  <h2 data-fr="Contactez-nous" data-en="Contact us"></h2>
 
   <form onsubmit="sendWhatsApp(event)">
-    <input placeholder="الاسم">
+    <input placeholder="Name">
     <input placeholder="Email">
-    <textarea placeholder="رسالتك"></textarea>
-    <button data-ar="إرسال" data-fr="Envoyer" data-en="Send"></button>
+    <textarea placeholder="Message"></textarea>
+    <button class="submit" data-fr="Envoyer" data-en="Send"></button>
   </form>
 </section>
 
 <!-- footer -->
 <footer>
-  <p data-ar="تابعونا على:" data-fr="Suivez-nous :" data-en="Follow us:"></p>
+  <p data-fr="Suivez-nous :" data-en="Follow us:"></p>
   <a href="https://web.facebook.com/profile.php?id=61582972839542">Facebook</a> |
   <a href="https://www.instagram.com/institut_arabeez/">Instagram</a> |
   <a href="https://t.me/+Fjs9Ba79UqkxMWU8">Telegram</a>
@@ -236,10 +250,9 @@ footer a{
 
 <script>
 function setLang(lang){
-  document.querySelectorAll('[data-ar]').forEach(el=>{
+  document.querySelectorAll('[data-fr]').forEach(el=>{
     el.innerText = el.dataset[lang];
   });
-  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 }
 
 function sendWhatsApp(e){
@@ -253,5 +266,4 @@ function sendWhatsApp(e){
 
 </body>
 </html>
-
 
