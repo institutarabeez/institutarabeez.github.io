@@ -7,78 +7,70 @@
 <title>ArabEez | معهد تعليم اللغة العربية والقرآن</title>
 
 <meta name="description" content="معهد ArabEez لتعليم اللغة العربية، الإنجليزية، القرآن والعلوم الشرعية. دورات أونلاين لجميع المستويات.">
-<meta name="keywords" content="ArabEez, Institut Arabe, تعليم العربية, تعليم القرآن, cours arabe, cours coran">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --main:#0a8f7a;
-  --dark:#0f172a;
-}
-
 body{
   margin:0;
   font-family:'Cairo',sans-serif;
-  background:#f9fafb;
-  color:#111;
+  background:#f4f4f4;
+  text-align:center;
 }
 
-/* HERO */
+/* language buttons */
+.lang{
+  position:fixed;
+  top:10px;
+  left:10px;
+}
+.lang button{
+  margin:2px;
+  padding:6px 10px;
+}
+
+/* hero */
 .hero{
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-  url("https://images.unsplash.com/photo-1584697964190-16a4b6b06f96");
-  background-size:cover;
-  background-position:center;
+  background:#777;
   color:white;
-  padding:90px 20px;
-  text-align:center;
+  padding:80px 20px;
 }
 
-.hero img{
-  max-width:140px;
-  margin-bottom:20px;
+.logo-box{
+  width:140px;
+  height:140px;
+  background:white;
+  border-radius:50%;
+  margin:0 auto 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
 }
 
-.hero h1{
-  font-size:40px;
-  margin:10px 0;
+.logo-box img{
+  width:90px;
 }
 
-.hero p{
-  font-size:18px;
-  max-width:700px;
-  margin:auto;
-}
-
-/* BUTTONS */
-.buttons a{
+/* buttons */
+.btn{
   display:inline-block;
-  margin:12px;
-  padding:14px 26px;
-  background:var(--main);
+  margin:10px;
+  padding:12px 25px;
+  background:#0a8f7a;
   color:white;
+  border-radius:25px;
   text-decoration:none;
-  border-radius:30px;
-  font-weight:700;
 }
 
-/* SECTIONS */
+/* section */
 .section{
-  padding:70px 20px;
-  text-align:center;
-}
-
-.section h2{
-  color:var(--main);
-  margin-bottom:30px;
+  padding:60px 20px;
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:20px;
   max-width:900px;
   margin:auto;
@@ -86,99 +78,118 @@ body{
 
 .card{
   background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  padding:15px;
+  border-radius:10px;
 }
 
-/* FORM */
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* form */
 form{
-  max-width:500px;
+  max-width:400px;
   margin:auto;
 }
-
 input,textarea{
   width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:8px;
-  border:1px solid #ccc;
-  font-family:'Cairo',sans-serif;
+  padding:10px;
+  margin:8px 0;
 }
-
 button{
+  padding:12px;
   width:100%;
-  padding:14px;
-  background:var(--main);
+  background:#0a8f7a;
   color:white;
   border:none;
-  border-radius:30px;
-  font-size:16px;
-  cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-  background:#0f172a;
-  color:white;
-  text-align:center;
-  padding:30px 15px;
-}
-
-footer a{
-  color:#4ade80;
-  margin:0 8px;
-  text-decoration:none;
+  border-radius:25px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<div class="lang">
+  <button onclick="setLang('ar')">AR</button>
+  <button onclick="setLang('fr')">FR</button>
+  <button onclick="setLang('en')">EN</button>
+</div>
+
 <section class="hero">
-  <img src="logo.png" alt="ArabEez Logo">
-  <h1>ArabEez</h1>
-  <p>
-  معهد تعليم اللغة العربية، الإنجليزية، القرآن الكريم والعلوم الشرعية  
-  <br>دورات أونلاين لجميع المستويات
-  </p>
-
-  <div class="buttons">
-    <a href="https://wa.me/213557082314">💬 WhatsApp</a>
-    <a href="mailto:arabeez213@gmail.com">📧 Email</a>
+  <div class="logo-box">
+    <img src="logo.png" alt="ArabEez">
   </div>
+
+  <h1 data-ar="ArabEez"
+      data-fr="Institut ArabEez"
+      data-en="ArabEez Institute"></h1>
+
+  <p data-ar="معهد تعليم اللغة العربية، الإنجليزية، القرآن والعلوم الشرعية"
+     data-fr="Institut d’enseignement de la langue arabe, anglaise, du Coran et des sciences islamiques"
+     data-en="Institute for teaching Arabic, English, Quran and Islamic studies"></p>
+
+  <a class="btn" href="https://wa.me/213557082314">WhatsApp</a>
+  <a class="btn" href="mailto:arabeez213@gmail.com">Email</a>
 </section>
 
-<!-- SERVICES -->
 <section class="section">
-  <h2>تخصصاتنا</h2>
+  <h2 data-ar="تخصصاتنا"
+      data-fr="Nos formations"
+      data-en="Our programs"></h2>
+
   <div class="cards">
-    <div class="card">📘 اللغة العربية</div>
-    <div class="card">📗 اللغة الإنجليزية</div>
-    <div class="card">📖 القرآن الكريم</div>
-    <div class="card">🕌 العلوم الشرعية</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae">
+      <p data-ar="اللغة العربية" data-fr="Langue arabe" data-en="Arabic"></p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584697964190-16a4b6b06f96">
+      <p data-ar="اللغة الإنجليزية" data-fr="Langue anglaise" data-en="English"></p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1564769625392-651b57ff4c59">
+      <p data-ar="القرآن الكريم" data-fr="Coran" data-en="Quran"></p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81">
+      <p data-ar="العلوم الشرعية" data-fr="Sciences islamiques" data-en="Islamic studies"></p>
+    </div>
   </div>
 </section>
 
-<!-- FORM -->
 <section class="section">
-  <h2>تواصل معنا</h2>
-  <form>
-    <input type="text" placeholder="الاسم" required>
-    <input type="email" placeholder="البريد الإلكتروني" required>
-    <textarea rows="4" placeholder="رسالتك"></textarea>
-    <button type="submit">إرسال</button>
+  <h2 data-ar="تواصل معنا" data-fr="Contactez-nous" data-en="Contact us"></h2>
+
+  <form onsubmit="sendWhatsApp(event)">
+    <input placeholder="الاسم">
+    <input placeholder="Email">
+    <textarea placeholder="رسالتك"></textarea>
+    <button data-ar="إرسال" data-fr="Envoyer" data-en="Send"></button>
   </form>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>تابعونا على:</p>
-  <a href="https://web.facebook.com/profile.php?id=61582972839542">Facebook</a> |
-  <a href="https://www.instagram.com/institut_arabeez/">Instagram</a> |
-  <a href="https://t.me/+Fjs9Ba79UqkxMWU8">Telegram</a>
-</footer>
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-ar]').forEach(el=>{
+    el.innerText = el.dataset[lang];
+  });
+  document.documentElement.dir = (lang==='ar')?'rtl':'ltr';
+}
+
+function sendWhatsApp(e){
+  e.preventDefault();
+  let n=e.target[0].value;
+  let m=e.target[2].value;
+  window.open("https://wa.me/213557082314?text="+encodeURIComponent(n+" - "+m));
+}
+</script>
 
 </body>
 </html>
+
