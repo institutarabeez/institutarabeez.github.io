@@ -1,70 +1,184 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Institut Arabe Ez | تعليم اللغة العربية والقرآن</title>
+<title>ArabEez | معهد تعليم اللغة العربية والقرآن</title>
 
-<meta name="description" content="Institut Arabe Ez: معهد متخصص في تعليم اللغة العربية واللغة الإنجليزية والقرآن الكريم. تواصل معنا عبر الهاتف أو واتساب.">
-<meta name="keywords" content="Institut Arabe Ez, تعليم العربية, تعليم القرآن, معهد عربي, cours arabe, institut arabe">
+<meta name="description" content="معهد ArabEez لتعليم اللغة العربية، الإنجليزية، القرآن والعلوم الشرعية. دورات أونلاين لجميع المستويات.">
+<meta name="keywords" content="ArabEez, Institut Arabe, تعليم العربية, تعليم القرآن, cours arabe, cours coran">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  text-align: center;
-  padding: 40px;
+:root{
+  --main:#0a8f7a;
+  --dark:#0f172a;
 }
-.card {
-  background: white;
-  max-width: 420px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 12px;
+
+body{
+  margin:0;
+  font-family:'Cairo',sans-serif;
+  background:#f9fafb;
+  color:#111;
 }
-a {
-  display: block;
-  margin: 15px 0;
-  padding: 14px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 18px;
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+  url("https://images.unsplash.com/photo-1584697964190-16a4b6b06f96");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:90px 20px;
+  text-align:center;
 }
-.phone {
-  background: #222;
+
+.hero img{
+  max-width:140px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:40px;
+  margin:10px 0;
+}
+
+.hero p{
+  font-size:18px;
+  max-width:700px;
+  margin:auto;
+}
+
+/* BUTTONS */
+.buttons a{
+  display:inline-block;
+  margin:12px;
+  padding:14px 26px;
+  background:var(--main);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:700;
+}
+
+/* SECTIONS */
+.section{
+  padding:70px 20px;
+  text-align:center;
+}
+
+.section h2{
+  color:var(--main);
+  margin-bottom:30px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* FORM */
+form{
+  max-width:500px;
+  margin:auto;
+}
+
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-family:'Cairo',sans-serif;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  background:var(--main);
+  color:white;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+}
+
+footer a{
+  color:#4ade80;
+  margin:0 8px;
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
-<div class="card">
 
-  <img src="logo.png" alt="Institut Arabe Ez Logo" style="max-width:120px;margin-bottom:15px;">
-
-  <h1>Institut Arabe Ez</h1>
-
-  <p><strong>Contactez-nous</strong></p>
-
+<!-- HERO -->
+<section class="hero">
+  <img src="logo.png" alt="ArabEez Logo">
+  <h1>ArabEez</h1>
   <p>
-معهد متخصص في تعليم اللغة العربية واللغة الإنجليزية والقرآن الكريم<br>
-Institut spécialisé dans l’enseignement de la langue arabe, anglaise et du Coran
+  معهد تعليم اللغة العربية، الإنجليزية، القرآن الكريم والعلوم الشرعية  
+  <br>دورات أونلاين لجميع المستويات
   </p>
 
-  <a href="tel:+213600000000" class="phone">📞 Contactez-nous</a>
-  <a href="https://wa.me/213557082314">💬 WhatsApp</a>
+  <div class="buttons">
+    <a href="https://wa.me/213557082314">💬 WhatsApp</a>
+    <a href="mailto:arabeez213@gmail.com">📧 Email</a>
+  </div>
+</section>
 
-  <!-- خريطة Google -->
-  <iframe 
-    src="PUT_REAL_GOOGLE_MAPS_EMBED_LINK_HERE"
-    width="100%" 
-    height="250" 
-    style="border:0;border-radius:8px;margin-top:20px;" 
-    loading="lazy">
-  </iframe>
+<!-- SERVICES -->
+<section class="section">
+  <h2>تخصصاتنا</h2>
+  <div class="cards">
+    <div class="card">📘 اللغة العربية</div>
+    <div class="card">📗 اللغة الإنجليزية</div>
+    <div class="card">📖 القرآن الكريم</div>
+    <div class="card">🕌 العلوم الشرعية</div>
+  </div>
+</section>
 
-</div>
+<!-- FORM -->
+<section class="section">
+  <h2>تواصل معنا</h2>
+  <form>
+    <input type="text" placeholder="الاسم" required>
+    <input type="email" placeholder="البريد الإلكتروني" required>
+    <textarea rows="4" placeholder="رسالتك"></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>تابعونا على:</p>
+  <a href="https://web.facebook.com/profile.php?id=61582972839542">Facebook</a> |
+  <a href="https://www.instagram.com/institut_arabeez/">Instagram</a> |
+  <a href="https://t.me/+Fjs9Ba79UqkxMWU8">Telegram</a>
+</footer>
+
 </body>
 </html>
