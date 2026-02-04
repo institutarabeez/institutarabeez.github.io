@@ -4,18 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>ArabEez | معهد تعليم اللغة العربية والقرآن</title>
+<title>ArabEez | Institut d’enseignement de la langue arabe et du Coran</title>
 
-<meta name="description" content="معهد ArabEez لتعليم اللغة العربية، الإنجليزية، القرآن والعلوم الشرعية. دورات أونلاين لجميع المستويات.">
+<meta name="description" content="ArabEez est un institut spécialisé dans l’enseignement de la langue arabe, anglaise, du Coran et des sciences islamiques. Cours en ligne pour tous les niveaux.">
+<meta name="keywords" content="ArabEez, institut arabe, cours arabe en ligne, apprendre le coran, sciences islamiques">
+
+<meta property="og:title" content="ArabEez Institut">
+<meta property="og:description" content="Institut d’enseignement de la langue arabe, anglaise et du Coran">
+<meta property="og:image" content="https://institutarabeez.github.io/logo.png">
+<meta property="og:type" content="website">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --main:#0a8f7a;
+  --dark:#1f2933;
+  --light:#f9fafb;
+}
+
 body{
   margin:0;
   font-family:'Cairo',sans-serif;
-  background:#f4f4f4;
+  background:var(--light);
   text-align:center;
+  color:#111;
 }
 
 /* language buttons */
@@ -23,17 +36,24 @@ body{
   position:fixed;
   top:10px;
   left:10px;
+  z-index:1000;
 }
 .lang button{
   margin:2px;
   padding:6px 10px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
 }
 
 /* hero */
 .hero{
-  background:#777;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1584697964190-16a4b6b06f96?auto=format&fit=crop&w=1200&q=80");
+  background-size:cover;
+  background-position:center;
   color:white;
-  padding:80px 20px;
+  padding:90px 20px;
 }
 
 .logo-box{
@@ -45,7 +65,7 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  box-shadow:0 10px 25px rgba(0,0,0,.3);
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
 }
 
 .logo-box img{
@@ -56,113 +76,145 @@ body{
 .btn{
   display:inline-block;
   margin:10px;
-  padding:12px 25px;
-  background:#0a8f7a;
+  padding:12px 26px;
+  background:var(--main);
   color:white;
-  border-radius:25px;
+  border-radius:30px;
   text-decoration:none;
+  font-weight:700;
 }
 
-/* section */
+/* sections */
 .section{
-  padding:60px 20px;
+  padding:70px 20px;
+}
+
+.section h2{
+  color:var(--main);
+  margin-bottom:40px;
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  max-width:900px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  max-width:1000px;
   margin:auto;
 }
 
 .card{
   background:white;
   padding:15px;
-  border-radius:10px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .card img{
   width:100%;
-  height:140px;
+  height:160px;
   object-fit:cover;
-  border-radius:8px;
+  border-radius:10px;
+  margin-bottom:10px;
 }
 
 /* form */
 form{
-  max-width:400px;
+  max-width:420px;
   margin:auto;
 }
+
 input,textarea{
   width:100%;
-  padding:10px;
-  margin:8px 0;
-}
-button{
   padding:12px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-family:'Cairo',sans-serif;
+}
+
+button{
   width:100%;
-  background:#0a8f7a;
+  padding:14px;
+  background:var(--main);
   color:white;
   border:none;
-  border-radius:25px;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* footer */
+footer{
+  background:var(--dark);
+  color:white;
+  padding:30px 15px;
+}
+
+footer a{
+  color:#4ade80;
+  margin:0 8px;
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
+<!-- language -->
 <div class="lang">
   <button onclick="setLang('ar')">AR</button>
   <button onclick="setLang('fr')">FR</button>
   <button onclick="setLang('en')">EN</button>
 </div>
 
+<!-- hero -->
 <section class="hero">
   <div class="logo-box">
-    <img src="logo.png" alt="ArabEez">
+    <img src="logo.png" alt="ArabEez Logo">
   </div>
 
   <h1 data-ar="ArabEez"
       data-fr="Institut ArabEez"
       data-en="ArabEez Institute"></h1>
 
-  <p data-ar="معهد تعليم اللغة العربية، الإنجليزية، القرآن والعلوم الشرعية"
-     data-fr="Institut d’enseignement de la langue arabe, anglaise, du Coran et des sciences islamiques"
-     data-en="Institute for teaching Arabic, English, Quran and Islamic studies"></p>
+  <p data-ar="معهد تعليم اللغة العربية، الإنجليزية، القرآن الكريم والعلوم الشرعية. دورات أونلاين لجميع المستويات."
+     data-fr="Institut spécialisé dans l’enseignement de la langue arabe, anglaise, du Coran et des sciences islamiques. Cours en ligne pour tous les niveaux."
+     data-en="Institute for teaching Arabic, English, Quran and Islamic studies. Online courses for all levels."></p>
 
   <a class="btn" href="https://wa.me/213557082314">WhatsApp</a>
   <a class="btn" href="mailto:arabeez213@gmail.com">Email</a>
 </section>
 
+<!-- programs -->
 <section class="section">
-  <h2 data-ar="تخصصاتنا"
-      data-fr="Nos formations"
-      data-en="Our programs"></h2>
+  <h2 data-ar="تخصصاتنا" data-fr="Nos formations" data-en="Our programs"></h2>
 
   <div class="cards">
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae">
-      <p data-ar="اللغة العربية" data-fr="Langue arabe" data-en="Arabic"></p>
+      <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80">
+      <p data-ar="اللغة العربية" data-fr="Langue arabe" data-en="Arabic Language"></p>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1584697964190-16a4b6b06f96">
-      <p data-ar="اللغة الإنجليزية" data-fr="Langue anglaise" data-en="English"></p>
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80">
+      <p data-ar="اللغة الإنجليزية" data-fr="Langue anglaise" data-en="English Language"></p>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1564769625392-651b57ff4c59">
+      <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=800&q=80">
       <p data-ar="القرآن الكريم" data-fr="Coran" data-en="Quran"></p>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81">
-      <p data-ar="العلوم الشرعية" data-fr="Sciences islamiques" data-en="Islamic studies"></p>
+      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=800&q=80">
+      <p data-ar="العلوم الشرعية" data-fr="Sciences islamiques" data-en="Islamic Studies"></p>
     </div>
+
   </div>
 </section>
 
+<!-- contact -->
 <section class="section">
   <h2 data-ar="تواصل معنا" data-fr="Contactez-nous" data-en="Contact us"></h2>
 
@@ -174,22 +226,32 @@ button{
   </form>
 </section>
 
+<!-- footer -->
+<footer>
+  <p data-ar="تابعونا على:" data-fr="Suivez-nous :" data-en="Follow us:"></p>
+  <a href="https://web.facebook.com/profile.php?id=61582972839542">Facebook</a> |
+  <a href="https://www.instagram.com/institut_arabeez/">Instagram</a> |
+  <a href="https://t.me/+Fjs9Ba79UqkxMWU8">Telegram</a>
+</footer>
+
 <script>
 function setLang(lang){
   document.querySelectorAll('[data-ar]').forEach(el=>{
     el.innerText = el.dataset[lang];
   });
-  document.documentElement.dir = (lang==='ar')?'rtl':'ltr';
+  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 }
 
 function sendWhatsApp(e){
   e.preventDefault();
-  let n=e.target[0].value;
-  let m=e.target[2].value;
-  window.open("https://wa.me/213557082314?text="+encodeURIComponent(n+" - "+m));
+  let name = e.target[0].value;
+  let msg = e.target[2].value;
+  let text = name + " : " + msg;
+  window.open("https://wa.me/213557082314?text=" + encodeURIComponent(text));
 }
 </script>
 
 </body>
 </html>
+
 
